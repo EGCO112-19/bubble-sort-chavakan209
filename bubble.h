@@ -22,15 +22,14 @@ void bubble(int a[], int N){
     int j;
     int sorted;
     display(a,N);
-    for (i = N - 1; i > 0; i--){
-        sorted = 1;
+    for (i = N-1; i>0; i--){
         for (j = 0; j < i; j++){
-            if(a[j]>a[j+1]){
-                swap(&a[j],&a[j+1]);
-                sorted = 0;
-            }
-        if(sorted) break;
-        display(a,N);
+          sorted = 0;
+          if(a[j]>a[j+1]){
+            swap(&a[j],&a[j+1]);
+            sorted = 1;
+          }
+          if(sorted) display(a,N);
        }
     }
 }
