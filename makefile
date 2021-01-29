@@ -1,4 +1,4 @@
 argument: main.c 
-	gcc Simplemain.c -o firstprogram
+	gcc simpleMain.c -o firstprogram
 
 
