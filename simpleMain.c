@@ -1,9 +1,15 @@
 #include<stdio.h>
 #include<stdlib.h>
+#include "bubble.h"
 
 void main(int argc, char **argv){
-  printf("There are %d arguments\n",argc-1);
-  int i;
-  for(i=1;i<argc;i++)
-    printf("argument#%d is %d\n",i, atoi(argv[i]));
+  int *a,N;
+  N = argc-1;
+  a = (int*)malloc(sizeof(int)*N);
+  for(int i = 0; i < N; i++){
+    a[i] = atoi(argv[i]);
+  }
+  printf("\nSorting Process\n");
+  bubble(a,N);
+  return 0;
 }
